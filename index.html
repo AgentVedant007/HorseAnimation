@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 300px;
+            position: relative;
+            left: 0;
+            transition: left 8s, transform 0s;
+            transition-timing-function: linear;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/horse.png" alt="" id="horse">
+    <br>
+    <button type="button" onclick="btnclick('60')">Go Right</button>
+    <button type="button" onclick="btnclick('0')">Go Left</button>
+    <script>
+        function btnclick(leftvalue) {
+            if (leftvalue == 60) {
+                document.getElementById('horse').src = "img/horse.gif"
+                document.getElementById('horse').style.left = "60%"
+                document.getElementById('horse').style.transform = "rotateY(0deg)"
+            } else if (leftvalue == 0) {
+                document.getElementById('horse').style.transform = "rotateY(180deg)"
+                document.getElementById('horse').style.left = "0"
+            }
+        }
+    </script>
+</body>
+
+</html>
